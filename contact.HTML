@@ -1,0 +1,91 @@
+<?php
+$errors = '';
+
+
+$myemail = 'milkabonilla7@gmail.com';
+if(empty($_POST['name']) ||
+   empty($_POST['email']) ||
+   empty($_POST['phone']) ||
+   empty($_POST['message']))
+{
+	$errors .= "\ n Error: todos los campos son obligatorios";
+}
+
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+
+if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email_address)) {
+
+	$errors .= "\ n Error: esta dirección de correo electrónico no es válida";
+}
+
+if( empty($errors) ) {
+	$to = $myemail;
+
+	$email_subject = "Envío del formulario de contacto: $name";
+
+	$email_body = "Has recibido un nuevo masaje. ".
+
+	" Aquí está la dirección:\n Name: $name \n Email: $email_address \n Phone: $phone \n Message: $message";
+
+	$headers = "From: $myemail\n";
+	$headers .= "Reply-To: $email_address";
+
+	mail($to,$email_subject,$email_body,$headers);
+	
+	header('Location: thank-you.html');
+}
+?>
+<!Doctype html>
+<html lang="en">
+
+
+<head>
+
+	<title>Gracias!</title>
+
+	<link rel="shortcut icon" type="Imagenes/image/x-icon" href="jtr.png">
+
+
+<style>
+
+h1 {
+
+	font-family : 'Oxygen', Helvetica, sans-serif;
+	font-size: 26px;
+    letter-spacing: 2px;
+    line-height: 42px;
+    margin-bottom: 20px;
+    font-weight: bold;	
+
+}
+
+label,a,body {
+	font-family : 'Oxygen', Helvetica, sans-serif;
+	font-size : 14px;
+
+}
+
+.respond {
+	padding: 100px 0;
+	text-align: center;
+}
+</style>	
+
+
+</head>	
+
+<body background=Imagenes/FONDO1.jpg>
+
+
+<div class="respond">
+
+	<font color="White"><h1>¡Gracias!</h1></font>
+
+	<font color="silver"><p>Gracias por llenar el formulario. ¡Nos pondremos en contacto con usted pronto!</p></font>
+</div>
+
+</body>
+</html>

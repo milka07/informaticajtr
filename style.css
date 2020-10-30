@@ -1,0 +1,77 @@
+#contact .form-control {
+  background: solid;
+  border: 2px solid #eeeeee;
+  color: #808080;
+  box-shadow: none;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+#contact .form-control:focus {
+  border-color: #808080;
+}
+
+#contact input {
+  height: 45px;
+}
+
+#contact textarea {
+  height: 170px;
+}
+
+#contact input[type="submit"] {
+  background: #63c6ae;
+  border-color: transparent;
+  color: #ffffff;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 18px;
+}
+
+#contact input[type="submit"]:hover {
+  background: #ffffff;
+  color: #63c6ae;
+}
+
+
+
+footer {
+  padding-top: 62px;
+  padding-bottom: 62px;
+  text-align: center;
+  position: relative;
+}
+
+.blog-footer {background: #f9f9f9;}
+
+
+/* social icon */
+.social-icon {
+  padding: 0;
+  margin: 0;
+}
+.social-icon li {
+  list-style: none;
+  display: inline-block;
+}
+.social-icon li a {
+  background: #202020;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  padding: 0px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.social-icon li a:hover {
+  background: #63c6ae;
+  transform: rotate(360deg);
+}

@@ -1,0 +1,99 @@
+* {
+	margin: 0px;
+	padding: 0px;
+
+}
+
+h1 {
+	border-color: #FFFFFF;
+	text-align: center;
+	font: bold 40px MiNuevaFuente, sans-serif;
+	color: hsla(0, 100%, 0%, 1);
+}@font-face { 
+
+	font-family: 'MiNuevaFuente';
+	src: url('FuentesTexto/Chicken Quiche.otf');	
+}
+
+h2 {
+	
+	font: bold 14px verdana, sans-serif;
+}
+
+header, section, footer, aside, nav, article, figure, figcaption,
+hgroup{
+	display: block;
+}
+
+body {
+	text-align: center;
+}
+
+#agrupar {
+
+
+	background: #76BA1B;/*Color de fondo de el cuadro que tiene todos los cuadritos*/
+	width: 960px;/*Esto hace mas grande el cuadro que contiene todos los cuadritos*/
+	margin: 15px auto;
+	text-align: left;
+	border: 0px
+}
+
+
+#menu {
+	border: 0px solid #123456;
+	background: linear-gradient(180deg, #031D06	,#0F921E , #031D06);
+	padding: 5px 15px;
+}
+
+#menu li {
+	
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+	font: bold 14px verdana, sans-serif;
+
+}
+
+#seccion {
+	float: left;
+	width:900px;
+	margin: 20px;
+}
+
+
+#pie {
+	clear: both;
+	text-align: center;
+	padding: 20px;
+	border-top: 0px solid #999999;
+}
+
+article {
+	background:#FFFBCC;
+	border: 1px solid #999999;
+	padding: 20px;
+	margin-bottom: 15px;
+}
+
+article footer {
+	text-align: right;
+}
+
+time {
+	color: #999999;
+}
+
+figcaption {
+	font: italic 14px verdana, sans-serif;
+}
+
+div {
+	width: 100px;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid #000000;
+	-chrome-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
